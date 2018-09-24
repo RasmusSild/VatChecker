@@ -81,7 +81,7 @@ class App extends Component {
                               <Form onSubmit={this.checkVatNumber}>
                                   <Form.Field>
                                       <label>VAT number</label>
-                                      <input onChange={(e) => {e.preventDefault(); this.setState({vatNumber: e.target.value})}}/>
+                                      <input disabled={requestLoading} onChange={(e) => {e.preventDefault(); this.setState({vatNumber: e.target.value})}}/>
                                   </Form.Field>
                                   <Button primary type='submit' loading={requestLoading}>Check</Button>
                               </Form>
